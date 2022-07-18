@@ -1,0 +1,64 @@
+import * as React from 'react'
+import { ThemeProvider } from 'styled-components';
+
+export const Context = React.createContext([]);
+
+type Props = {
+    children: JSX.Element[]
+}
+type Action = {
+    type: string,
+    payload: any
+}
+type State = {
+    languageMode: string,
+    colorMode: string
+}
+
+const reducer = (state: State, action: Action): State => {
+    const { type, payload } = action;
+
+    switch (type) {
+        case 'CHANGE_LANGUAGE_MODE':
+            return {
+                ...state, 
+                languageMode: payload
+            }
+        case 'CHANGE_COLOR_MODE': 
+            return {
+                ...state,
+                colorMode: state.colorMode == 'light' ? 'dark' : 'light'
+            }
+        default: 
+            return state;
+    }
+}
+
+const themes = {
+    light: {
+        primary: '#1C5D99',
+        white: '#F5F5F5',
+        black: '#222222'
+    },
+    dark: { 
+        white: '#222222',
+        black: '#F5F5F5'
+    }
+}
+
+const ContextProvider = ({children}: Props): JSX.Element => {
+    const [ state, dispatch ] = React.useReducer(reducer, {
+        languageMode: 'pl',
+        colorMode: 'light'
+    })
+
+    return (
+        <Context.Provider value={{ state, dispatch }}>
+            <ThemeProvider theme={state.colorMode === 'light' ? themes.light : themes.dark}>
+                {children}
+            </ThemeProvider>
+        </Context.Provider>
+    );
+}
+
+export default ContextProvider
