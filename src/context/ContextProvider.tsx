@@ -6,11 +6,13 @@ export const Context = React.createContext([]);
 type Props = {
     children: JSX.Element[]
 }
+
 type Action = {
     type: string,
-    payload: any
+    payload?: any
 }
-type State = {
+
+export type State = {
     languageMode: string,
     colorMode: string
 }
@@ -36,13 +38,16 @@ const reducer = (state: State, action: Action): State => {
 
 const themes = {
     light: {
-        primary: '#1C5D99',
-        white: '#F5F5F5',
-        black: '#222222'
+        primary: '#6610F2',
+        light: '#F5F5F5',
+        black: '#222222',
+        white: '#fff'
     },
     dark: { 
-        white: '#222222',
-        black: '#F5F5F5'
+        light: '#222222',
+        black: '#F5F5F5',
+        primary: '#6610F2',
+        white: '#191919'
     }
 }
 
@@ -51,6 +56,14 @@ const ContextProvider = ({children}: Props): JSX.Element => {
         languageMode: 'pl',
         colorMode: 'light'
     })
+
+    React.useEffect(() => {
+        const hours = (new Date()).getHours();
+
+        // if ((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7)) {
+        //     dispatch({type: 'CHANGE_COLOR_MODE'})
+        // }
+    }, [])
 
     return (
         <Context.Provider value={{ state, dispatch }}>

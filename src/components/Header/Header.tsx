@@ -1,12 +1,16 @@
 import * as React from 'react'
-import { Navbar, NavbarWrapper, NavbarBrand, NavbarMenu, NavbarMenuItem, LangToggler } from './Header.styled'
+import { Navbar, NavbarWrapper, NavbarBrand, NavbarMenu, NavbarMenuItem, LangToggler, NavbarToggler } from './Header.styled'
 import UI from './Header.ui'
 import { Context } from '../../context/ContextProvider'
-import { StyledRow } from '../GlobalStyle'
+import { StyledRow, StyledContainer } from '../GlobalStyle'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
-  const { state, dispatch } = React.useContext(Context) 
+  const { state, dispatch } = React.useContext<any>(Context)
   const [ useEnglish, setUseEnglish ] = React.useState(false)
+  const [ isMenuOpened, setIsMenuOpened ] = React.useState(false)
+  const [ offsetTop, setOffsetTop ] = React.useState(0);
 
   const toggleLang = (): void => {
     if (!useEnglish) {
@@ -22,35 +26,39 @@ const Header = () => {
     dispatch({type: 'CHANGE_COLOR_MODE'})
   }
 
+  const { languageMode }: { languageMode: string } = state;
+
   return (
     <Navbar>
-        <NavbarWrapper>
-            <NavbarBrand>
-                J Klimek
-            </NavbarBrand>
+        <StyledContainer>
+          <NavbarWrapper>
+              <NavbarBrand href="/">
+                  J Klimek
+              </NavbarBrand>
 
-            <NavbarMenu>
-              <NavbarMenuItem>
-                {UI[state.languageMode].aboutMe}
-              </NavbarMenuItem>
-              <NavbarMenuItem>
-                {UI[state.languageMode].experience}
-              </NavbarMenuItem>
-              <NavbarMenuItem>
-                {UI[state.languageMode].projects}
-              </NavbarMenuItem>
-              <NavbarMenuItem>
-                {UI[state.languageMode].publications}
-              </NavbarMenuItem>
-              <NavbarMenuItem>
-                {UI[state.languageMode].contact}
-              </NavbarMenuItem>
-            </NavbarMenu>
-            <StyledRow>
-              <LangToggler active={useEnglish} onClick={toggleLang}>🇬🇧</LangToggler>
-              <LangToggler active={state.colorMode == 'light' ? false : true} onClick={toggleColorMode}>🌙</LangToggler>
-            </StyledRow>
-        </NavbarWrapper>
+              <NavbarMenu active={isMenuOpened}>
+                <NavbarMenuItem href="#about-me">
+                  {UI[languageMode as keyof typeof UI].aboutMe}
+                </NavbarMenuItem>
+                <NavbarMenuItem href="#experience">
+                  {UI[languageMode as keyof typeof UI].experience}
+                </NavbarMenuItem>
+                <NavbarMenuItem href="#projects">
+                  {UI[languageMode as keyof typeof UI].projects}
+                </NavbarMenuItem>
+                <NavbarMenuItem>
+                  {UI[languageMode as keyof typeof UI].contact}
+                </NavbarMenuItem>
+              </NavbarMenu>
+              <StyledRow>
+                <LangToggler active={useEnglish} onClick={toggleLang}>🇬🇧</LangToggler>
+                <LangToggler active={state.colorMode == 'light' ? false : true} onClick={toggleColorMode}>🌙</LangToggler>
+                <NavbarToggler active={isMenuOpened} onClick={() => setIsMenuOpened(!isMenuOpened)}>
+                  <FontAwesomeIcon icon={faBars} />
+                </NavbarToggler>
+              </StyledRow>
+          </NavbarWrapper>
+        </StyledContainer>
     </Navbar>
   )
 }

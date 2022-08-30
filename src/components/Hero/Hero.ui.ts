@@ -1,13 +1,22 @@
 const HeroUi = {
     pl: {
-        summary: "Developer z Krakowa z ponad 2 letnim doświadczeniem komercyjnym.", 
-        aboutMe: "Dowiedz się więcej",
-        contact: "Skontaktuj się"
+        name: "Nazywam się", 
+        iam: "i jestem",
+        summary: 'Od ponad dwóch lat aktywnie zbieram doświadczenie pracując nad produktami komercyjnymi.',
+        contact: "Skontaktuj się",
+        hi: "Cześć,",
+        developer: "Fullstack Developerem",
+        projects: "Zobacz moje projekty"
     },
     en: {
-        summary: "Developer from Krakow with 2+ years of commercial experience.", 
-        aboutMe: "Learn more",
-        contact: "Contact me"
+        name: "My name is", 
+        iam: "and I am",
+        summary: 'For over two years I have been actively collecting experience working on commercial products.',
+        contact: "Contact me",
+        hi: "Hi,",
+        developer: "Fullstack Developer",
+        projects: "Check out my projects"
+
     }
 }
 
