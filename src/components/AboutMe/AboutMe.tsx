@@ -5,6 +5,7 @@ import { AboutMeWrapper, StyledImageWrapper, StyledRightSvg, StyledAboutMeConten
 import UI from './AboutMe.ui'
 import { Context } from '../../context/ContextProvider'
 import { StaticImage } from 'gatsby-plugin-image';
+import right from '../../assets/right.svg'
 
 const AboutMe: React.FC = (): JSX.Element => {
 
@@ -18,7 +19,7 @@ const AboutMe: React.FC = (): JSX.Element => {
                     <StyledImageWrapper>
                         <div>
                             <StaticImage src={'../../assets/me.jpeg'} alt="Me" placeholder="blurred"></StaticImage>
-                            <StyledRightSvg src={'/right.svg'}/>
+                            <StyledRightSvg src={right}/>
                         </div>
                     </StyledImageWrapper>
                     <StyledAboutMeContent>

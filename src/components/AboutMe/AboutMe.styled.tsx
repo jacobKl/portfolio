@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import underlay from '../../assets/underlay.png'
 
 export const AboutMeWrapper = styled.div `
     min-height: 100vh;
@@ -8,7 +9,7 @@ export const AboutMeWrapper = styled.div `
     color: ${props => props.theme.black};
     align-items: center;
     justify-content: center;
-    background-image: ${props => props.theme.dark ? "" : "url('/underlay.png')"};
+    background-image: ${props => props.theme.dark ? "" : `url(${underlay})`};
     background-size: cover;
     background-position: 0 100%;
     padding-bottom: 50px;

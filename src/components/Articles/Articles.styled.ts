@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import underlay from '../../assets/underlay_top.png'
 
 export const StyledArticles = styled.section`
     position: relative;
@@ -7,7 +8,7 @@ export const StyledArticles = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: ${props => props.theme.dark ? "" : "url('/underlay_top.png')"};
+    background-image: ${props => props.theme.dark ? "" : `url(${underlay})`};
     padding: 140px 0;
     background-position: 0 0;
     background-repeat: no-repeat;
