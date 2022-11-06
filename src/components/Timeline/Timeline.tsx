@@ -26,7 +26,7 @@ const Timeline = (): JSX.Element => {
                         <StyledTimelineRow>
                             <StyledTimelineCol variant={'right'}/>
                             <StyledTimelineIcon>
-                                <StaticImage src={'../../../public/static/zsl.png'} alt='Politechnika Krakowska' />
+                                <StaticImage src={'../../assets/zsl.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2018</span>
@@ -40,7 +40,7 @@ const Timeline = (): JSX.Element => {
                                 <h6>Krakweb</h6>
                             </StyledTimelineCol>
                             <StyledTimelineIcon>
-                                <StaticImage src={'../../../public/static/krakweb.png'} alt='Politechnika Krakowska' />
+                                <StaticImage src={'../../assets/krakweb.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={'left'}>
                                 {TimelineUi[languageMode].practise}
@@ -52,7 +52,7 @@ const Timeline = (): JSX.Element => {
                                 Fullstack Web Developer
                             </StyledTimelineCol>
                             <StyledTimelineIcon>
-                                <StaticImage src={'../../../public/static/krakweb.png'} alt='Politechnika Krakowska' />
+                                <StaticImage src={'../../assets/krakweb.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>06.2020 - {TimelineUi[languageMode].now}</span>
@@ -65,7 +65,7 @@ const Timeline = (): JSX.Element => {
                                 {TimelineUi[languageMode].it}
                             </StyledTimelineCol>
                             <StyledTimelineIcon>
-                                <StaticImage src={'../../../public/static/pk.jpg'} alt='Politechnika Krakowska' />
+                                <StaticImage src={'../../assets/pk.jpg'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2022</span>

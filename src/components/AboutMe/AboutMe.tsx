@@ -17,8 +17,8 @@ const AboutMe: React.FC = (): JSX.Element => {
                 <StyledRow>
                     <StyledImageWrapper>
                         <div>
-                            <StaticImage src={'../../../public/static/me.jpeg'} alt="Me" placeholder="blurred"></StaticImage>
-                            <StyledRightSvg src={'/static/right.svg'}/>
+                            <StaticImage src={'../../assets/me.jpeg'} alt="Me" placeholder="blurred"></StaticImage>
+                            <StyledRightSvg src={'/right.svg'}/>
                         </div>
                     </StyledImageWrapper>
                     <StyledAboutMeContent>

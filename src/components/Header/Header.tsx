@@ -10,7 +10,6 @@ const Header = () => {
   const { state, dispatch } = React.useContext<any>(Context)
   const [ useEnglish, setUseEnglish ] = React.useState(false)
   const [ isMenuOpened, setIsMenuOpened ] = React.useState(false)
-  const [ offsetTop, setOffsetTop ] = React.useState(0);
 
   const toggleLang = (): void => {
     if (!useEnglish) {

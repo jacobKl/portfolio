@@ -26,7 +26,7 @@ const Layout = ({title, description, children}: Props): JSX.Element => {
             <Helmet>
                 <title>{seo.title}</title>
                 <meta name="description" content={seo.description} />
-                <link rel="icon" type="image/x-icon" href="/static/favicon-32x32.png"></link>
+                <link rel="icon" type="image/x-icon" href={'../assets/favicon-32x32.png'}></link>
             </Helmet>
             <ContextProvider>
                 <GlobalStyle/>

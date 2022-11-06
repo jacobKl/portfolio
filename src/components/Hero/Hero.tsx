@@ -4,15 +4,21 @@ import UI from './Hero.ui'
 import { Context } from '../../context/ContextProvider'
 import Button from '../Button/Button'
 import { StyledHeroLeftColumn, StyledHeroSection, StyledHeroSummary, StyledHi, StyledLeftInvertedSvg, StyledLeftSvg, StyledDots } from './Hero.styled'
+import left from '../../assets/left.svg';
 
 const Hero: React.FC = () => {
     const { state } = React.useContext<any>(Context)
     const { languageMode } : { languageMode: string } = state;
+    const [ innerWidth, setInnerWidth ] = React.useState(0);
     
+    React.useEffect(() => {
+        setInnerWidth(window.innerWidth);
+    })
+
     return (
         <StyledHeroSection>
-            { window.innerWidth >= 986 ? <StyledLeftSvg src={'/static/left.svg'}/> : null }
-            <StyledLeftInvertedSvg src={'/static/left.svg'}/>
+            { innerWidth >= 986 ? <StyledLeftSvg src={left}/> : null }
+            <StyledLeftInvertedSvg src={left}/>
             <StyledContainer>
                 <StyledHeroLeftColumn style={{height: '90vh'}}>
                     <StyledHi>

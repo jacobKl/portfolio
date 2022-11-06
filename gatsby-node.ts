@@ -17,7 +17,12 @@ exports.createPages = ({ graphql, actions }) => {
                     slug,
                     intro,
                     content {
-                      raw
+                      raw,
+                      references {
+                        __typename ... on ContentfulAsset {
+                          url
+                        }
+                      }
                     },
                     image {
                       gatsbyImageData

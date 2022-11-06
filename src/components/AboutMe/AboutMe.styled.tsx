@@ -8,7 +8,7 @@ export const AboutMeWrapper = styled.div `
     color: ${props => props.theme.black};
     align-items: center;
     justify-content: center;
-    background-image: ${props => props.theme.dark ? "" : "url('/static/underlay.png')"};
+    background-image: ${props => props.theme.dark ? "" : "url('/underlay.png')"};
     background-size: cover;
     background-position: 0 100%;
     padding-bottom: 50px;
