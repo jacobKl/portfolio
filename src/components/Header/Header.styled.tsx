@@ -20,7 +20,7 @@ export const NavbarBrand = styled.a `
     color: ${props => props.theme.black};
 `;
 
-export const NavbarMenu = styled.div `
+export const NavbarMenu = styled.div<{ active: boolean }> `
     display: flex;
     transition: .4s;
     flex: 1;
@@ -40,6 +40,7 @@ export const NavbarMenu = styled.div `
         z-index: 10;
         align-items: center;
         justify-content: center;
+        margin: 0;
 
         ${props => props.active && 'opacity: 1; pointer-events: all; transition: .4s;'};
     }
@@ -61,11 +62,19 @@ export const NavbarMenuItem = styled.a `
 
     @media (max-width: 768px) {
         font-size: 2rem;
-        margin: 10px 0;
+        padding: 10px 0;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            background-color: ${props => props.theme.black};
+            color: ${props => props.theme.white};            
+        }
     }
 `;
 
-export const LangToggler = styled.div `
+export const LangToggler = styled.div<{ active: boolean }>`
     cursor: pointer;
     filter: grayscale(1);
     transition: .4s;
@@ -79,7 +88,7 @@ export const LangToggler = styled.div `
     ${props => props.active && 'filter: grayscale(0)'};
 `;
 
-export const NavbarToggler = styled.div `
+export const NavbarToggler = styled.div<{ active: boolean }> `
     justify-content: center;
     align-items: center;
     padding: 10px 5px;

@@ -1,7 +1,7 @@
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Button from "../Button/Button";
-import { StyledArticleTile, StyledArticleContent, StyledArticleTileWrapper } from "./ArticleTile.styled";
+import { StyledArticleTile, StyledArticleContent, StyledArticleTileWrapper, StyledArticleImage } from "./ArticleTile.styled";
 
 type Props = {
     props: {
@@ -20,15 +20,17 @@ const ArticleTile = ({props}: Props) => {
             <StyledArticleTile>
                 <GatsbyImage image={props.image.gatsbyImageData} alt={props.title}/>
                 <StyledArticleContent>
-                    <h2>
+                    <div>
+                        <h2>
                             <a href={props.slug}>
                                 {props.title}
                             </a>
                         </h2>
                         <p>{props.intro}</p>
-                        <div>
-                            <Button text={"Przeczytaj"} variant={"primary"} anchor={props.slug} />
-                        </div>
+                    </div>
+                    <div>
+                        <Button text={"Przeczytaj"} variant={"primary"} anchor={props.slug} />
+                     </div>
                 </StyledArticleContent>
             </StyledArticleTile>
         </StyledArticleTileWrapper>

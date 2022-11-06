@@ -11,7 +11,7 @@ const HeroUi = {
     en: {
         name: "My name is", 
         iam: "and I am",
-        summary: 'For over two years I have been actively collecting experience working on commercial products.',
+        summary: "For over two years I have been actively collecting experience by working on commercial products.",
         contact: "Contact me",
         hi: "Hi,",
         developer: "Fullstack Developer",

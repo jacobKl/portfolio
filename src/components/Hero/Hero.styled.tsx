@@ -1,4 +1,3 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components'
 
 export const StyledHeroLeftColumn = styled.div`
@@ -14,6 +13,10 @@ export const StyledHeroLeftColumn = styled.div`
         font-size: 3rem;
         position: relative;
         margin: 0;
+
+        @media (max-width: 986px) {
+            font-size: 1.8rem;  
+        }
 
         &:after {
             content: '';
@@ -38,6 +41,10 @@ export const StyledHi = styled.p`
     font-weight: 600;
     font-size: 19px;
     margin: 0;
+
+    @media (max-width: 986px) {
+        font-size: .7rem;
+    }
 `;
 
 export const StyledHeroSummary = styled.p`
@@ -45,6 +52,11 @@ export const StyledHeroSummary = styled.p`
     font-size: 22px;
     line-height: 32px;
     margin: 40px 0; 
+
+    @media (max-width: 986px) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 `;
 
 export const StyledLeftSvg = styled.img`
@@ -60,6 +72,11 @@ export const StyledLeftInvertedSvg = styled.img`
     top: 0;
     transform: translateX(50%) translateY(-50%);
     z-index: -1;
+
+    @media (max-width: 986px) {
+        scale: 0.5;
+        transform: translateX(90%) translateY(-130%);
+    }
 `;
 
 export const StyledHeroSection = styled.section`

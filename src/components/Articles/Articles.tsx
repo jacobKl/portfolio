@@ -1,10 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { Context } from '../../context/ContextProvider';
 import React from 'react'
-import styled from 'styled-components';
 import ArticleTile from '../ArticleTile/ArticleTile';
-import { FullScreenSection, StyledContainer, StyledSectionHeader } from '../GlobalStyle';
+import { StyledSectionHeader } from '../GlobalStyle';
+import { StyledArticles, StyledArticlesContainer } from './Articles.styled';
+import UI from './Articles.ui';
 
 const Articles: React.FC = (): JSX.Element => {
+
+
+    const { state } = React.useContext<any>(Context)
+    const { languageMode } : { languageMode: string } = state;
+
     const data = useStaticQuery(graphql`
         query MyQuery {
             allContentfulPost(limit: 3) {
@@ -31,37 +38,14 @@ const Articles: React.FC = (): JSX.Element => {
         <StyledArticles>
             <StyledSectionHeader>
                 <span>03.</span>
-                Moje projekty
+                {UI[languageMode].myProjects}
             </StyledSectionHeader>
             <StyledArticlesContainer id="projects">
-                {data.allContentfulPost.edges.map(article => <ArticleTile props={article.node} />)}
+                {data.allContentfulPost.edges.map((article,j) => <ArticleTile key={j} props={article.node} />)}
             </StyledArticlesContainer>
         </StyledArticles>
     );
 }
-
-const StyledArticles = styled.section`
-    height: 100vh;
-    background-image: url('/static/underlay_top.png');
-    background-size: cover;
-    background-position: 0 0;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-
-const StyledArticlesContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 80%;
-    justify-content: space-between;
-    z-index: 11;
-    position: relative;
-    margin: 0 -15px;
-`;
 
 export default Articles
 

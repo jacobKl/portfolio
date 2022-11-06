@@ -41,13 +41,17 @@ const themes = {
         primary: '#6610F2',
         light: '#F5F5F5',
         black: '#222222',
-        white: '#fff'
+        white: '#fff',
+        tile: '#fff',
+        dark: false
     },
     dark: { 
         light: '#222222',
         black: '#F5F5F5',
         primary: '#6610F2',
-        white: '#191919'
+        white: '#191919',
+        tile: "#222",
+        dark: true
     }
 }
 
@@ -60,9 +64,9 @@ const ContextProvider = ({children}: Props): JSX.Element => {
     React.useEffect(() => {
         const hours = (new Date()).getHours();
 
-        // if ((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7)) {
-        //     dispatch({type: 'CHANGE_COLOR_MODE'})
-        // }
+        if ((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7)) {
+            dispatch({type: 'CHANGE_COLOR_MODE'})
+        }
     }, [])
 
     return (

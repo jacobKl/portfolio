@@ -23,26 +23,26 @@ const AboutMe: React.FC = (): JSX.Element => {
                     </StyledImageWrapper>
                     <StyledAboutMeContent>
                         <StyledSectionHeader>
-                            <span>01.</span> O mnie
+                            <span>01.</span> {UI[languageMode].aboutMe}
                         </StyledSectionHeader>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, deleniti? Saepe cum eaque porro distinctio expedita fugiat odit nulla magnam?
+                            {UI[languageMode].aboutMeParagraph1}
                         </p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas veniam ducimus cupiditate iure atque aliquam culpa, molestias totam necessitatibus at sint deleniti, voluptas harum qui. Veritatis necessitatibus et quaerat earum.
+                            {UI[languageMode].aboutMeParagraph2}
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe delectus non modi culpa! Dolorem numquam laborum fugit eaque quisquam.
+                            {UI[languageMode].aboutMeParagraph3}
                         </p>
                         <h5>
-                            Technologie
+                            {UI[languageMode].tech}
                         </h5>
                         <ul>
                             <li>JavaScript (ES6)</li>
                             <li>PHP</li>
                             <li>Express / Node.js</li>
                             <li>React</li>
-                            <li>HTML / CSS / SCS</li>
+                            <li>HTML / CSS / SCSS</li>
                             <li>WordPress</li>
                         </ul>
                     </StyledAboutMeContent>

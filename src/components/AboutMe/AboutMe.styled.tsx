@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const AboutMeWrapper = styled.div `
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     background: ${props => props.theme.white};
     color: ${props => props.theme.black};
     align-items: center;
     justify-content: center;
-    background-image: url('/static/underlay.png');
+    background-image: ${props => props.theme.dark ? "" : "url('/static/underlay.png')"};
     background-size: cover;
     background-position: 0 100%;
+    padding-bottom: 50px;
 `;
 
 export const StyledImageWrapper = styled.div`
@@ -27,6 +28,9 @@ export const StyledImageWrapper = styled.div`
         padding: 20px 40px;
         overflow: hidden;
         filter: drop-shadow(15px 10px 4px rgba(0,0,0,0.2));
+    }
+    @media (max-width: 986px) {
+        flex: 1 0 100%;
     }
 `;
 
@@ -74,4 +78,8 @@ export const StyledAboutMeContent = styled.div `
         margin-bottom: 5px;
     }
 
+    @media (max-width: 986px) {
+        flex: 1 0 100%;
+        padding-bottom: 50px;
+    }
 `;

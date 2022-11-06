@@ -37,6 +37,17 @@ const GlobalStyle = createGlobalStyle `
   a {
     text-decoration: none;
   }
+
+  input, textarea {
+    background: ${props => props.theme.white};
+    border: 1px solid ${props => props.theme.light};
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    resize: no-resize;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 `;
 
 export const StyledAnchor = styled.a `
@@ -45,7 +56,7 @@ export const StyledAnchor = styled.a `
   transition: .4s;
   font-family: Poppins;
   font-weight: 700;
-  border-radius: 2px;
+  border-radius: 5px;
   letter-spacing: 0.44px;
   font-size: 16px;
   display: block;
@@ -62,8 +73,7 @@ export const StyledAnchor = styled.a `
   ${props => props.variant === 'outlineDark' ? `color: ${props.theme.black}; border: 1px solid ${props.theme.black}; &:hover {background: ${props.theme.black}; color: ${props.theme.white};}` : ''}
   ${props => props.variant === 'primary' ? `color: white; border: 1px solid ${props.theme.primary}; background-color: ${props.theme.primary};`: ''}
   ${props => props.variant === 'text' ? `color: ${props.theme.primary};`: ''}
-
-  `;
+`;
 
 export const StyledRow = styled.div `
   display: flex;
@@ -74,7 +84,7 @@ export const StyledRow = styled.div `
 
 
 export const FullScreenSection = styled.section `
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   margin: 60px 0;
 `;
@@ -95,6 +105,10 @@ export const StyledContainer = styled.div`
 export const StyledColumn = styled.div`
   flex: 1;
   padding: 15px 0;
+
+  @media (max-width: 986px) {
+    flex: 1 0 100%;
+  }
 `;
 
 export const StyledSectionTitle = styled.h2 `
@@ -106,6 +120,8 @@ export const StyledSectionTitle = styled.h2 `
 
 export const StyledSectionHeader = styled.h2 `
     font-size: 36px;
+    color: ${props => props.theme.black};
+    margin-top: 0;
 
     span {
         color: ${props => props.theme.primary};

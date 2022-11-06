@@ -1,10 +1,16 @@
 import { StaticImage } from "gatsby-plugin-image"
+import { Context } from "../../context/ContextProvider"
+import TimelineUi from "./Timeline.ui"
 import React from "react"
-import styled from "styled-components"
 import Button from "../Button/Button"
 import { StyledColumn, StyledContainer, StyledRow, StyledSectionHeader } from "../GlobalStyle"
+import { StyledTimeline, StyledTimelineCol, StyledTimelineIcon, StyledTimelineRow, StyledTimelineStep, TimelineWrapper } from "./Timeline.styled"
 
 const Timeline = (): JSX.Element => {
+
+  const { state } = React.useContext<any>(Context)
+  const { languageMode } : { languageMode: string } = state;
+
   return (
     <TimelineWrapper id="experience">
         <StyledContainer>
@@ -24,7 +30,7 @@ const Timeline = (): JSX.Element => {
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2018</span>
-                                <h6>Zespół Szkół Łączności</h6>
+                                <h6>{TimelineUi[languageMode].highschool}</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                         <StyledTimelineStep height={"100"}/>
@@ -37,7 +43,7 @@ const Timeline = (): JSX.Element => {
                                 <StaticImage src={'../../../public/static/krakweb.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={'left'}>
-                                Praktyka
+                                {TimelineUi[languageMode].practise}
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                         <StyledTimelineStep height={"30"}/>
@@ -49,21 +55,21 @@ const Timeline = (): JSX.Element => {
                                 <StaticImage src={'../../../public/static/krakweb.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
-                                <span>06.2020 - obecnie</span>
+                                <span>06.2020 - {TimelineUi[languageMode].now}</span>
                                 <h6>Krakweb</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                         <StyledTimelineStep height={"100"}/>
                         <StyledTimelineRow>
                             <StyledTimelineCol variant={"right"}>
-                                Informatyka
+                                {TimelineUi[languageMode].it}
                             </StyledTimelineCol>
                             <StyledTimelineIcon>
                                 <StaticImage src={'../../../public/static/pk.jpg'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2022</span>
-                                <h6>Politechnika Krakowska</h6>
+                                <h6>{TimelineUi[languageMode].highschool}</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                     </StyledTimeline>
@@ -71,15 +77,15 @@ const Timeline = (): JSX.Element => {
                 <StyledColumn style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                     <StyledSectionHeader>
                         <span>02.</span>
-                        Doświadczenie
+                        {TimelineUi[languageMode].experience}
                     </StyledSectionHeader>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, non nobis quis doloribus aliquam et! Officia expedita accusamus placeat doloribus?
+                        {TimelineUi[languageMode].experienceParagraph1}
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero alias ratione dolores corrupti, nostrum voluptatibus, dolore maiores quaerat eveniet ipsam laudantium rem quisquam eius vel ad sequi explicabo. Minima praesentium similique dolores molestiae voluptates neque ducimus exercitationem eaque fuga!
+                    {TimelineUi[languageMode].experienceParagraph2}
                     </p>
-                    <Button text={'Pobierz moje CV'} variant={'primary'} anchor={'#'} style={{alignSelf: 'start'}}/>
+                    <Button text={TimelineUi[languageMode].getCv} variant={'primary'} anchor={'#'} style={{alignSelf: 'start'}}/>
                 </StyledColumn>
             </StyledRow>
         </StyledContainer>
@@ -87,55 +93,4 @@ const Timeline = (): JSX.Element => {
   )
 }
 
-const TimelineWrapper = styled.section`
-    background-color: ${props => props.theme.light};
-    margin: 0;
-`;
-
-const StyledTimeline = styled.div `
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-`;
-
-const StyledTimelineRow = styled.div `
-    display: flex;
-    align-items: center;    
-`;
-
-const StyledTimelineCol = styled.div<{ variant: string }> `
-    flex: 2 0 40%;
-
-    text-align: ${ props => props.variant };
-
-    span {
-        color: #ccc;
-        font-size: 12px;
-    }
-
-    h6 {
-        margin: 0;
-    }
-`;
-
-const StyledTimelineIcon = styled.div `
-    width: 50px !important;
-    height: 50px !important;
-    border-radius: 25px;
-    border: 2px solid ${props => props.theme.primary};
-    margin: 0 10px;
-    overflow: hidden;
-
-    img {
-        object-fit: cover;
-        padding: 8px;
-    }
-`;
-
-const StyledTimelineStep = styled.div<{height: string}> `
-    height: ${props => props.height}px;
-    width: 2px;
-    background: ${props => props.theme.black};
-    margin: 3px auto;
-`;
 export default Timeline

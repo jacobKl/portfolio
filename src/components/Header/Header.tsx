@@ -46,7 +46,7 @@ const Header = () => {
                 <NavbarMenuItem href="#projects">
                   {UI[languageMode as keyof typeof UI].projects}
                 </NavbarMenuItem>
-                <NavbarMenuItem>
+                <NavbarMenuItem href="#contact">
                   {UI[languageMode as keyof typeof UI].contact}
                 </NavbarMenuItem>
               </NavbarMenu>
