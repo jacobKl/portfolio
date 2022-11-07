@@ -12,7 +12,7 @@ export const TimelineWrapper = styled.section`
 export const StyledTimeline = styled.div `
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 10px;
 `;
 
 export const StyledTimelineRow = styled.div `

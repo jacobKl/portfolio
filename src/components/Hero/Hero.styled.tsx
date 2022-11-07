@@ -64,6 +64,10 @@ export const StyledLeftSvg = styled.img`
     left: -5%;
     bottom: 0;
     transform: translateX(-40%) translateY(40%);
+
+    @media (max-width: 986px) {
+        display: none;
+    }
 `;
 
 export const StyledLeftInvertedSvg = styled.img`

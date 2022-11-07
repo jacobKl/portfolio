@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero"
 import AboutMe from "../components/AboutMe/AboutMe"
 import Articles from "../components/Articles/Articles"
 import Timeline from "../components/Timeline/Timeline";
+import styled from 'styled-components';
 
 const IndexPage = () => {
   return (
