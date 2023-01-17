@@ -19,7 +19,7 @@ function Cookies(): JSX.Element {
   return (
     <StyledCookiesWrapper visible={shouldBeDisplayed}>
         <div>
-            Ta strona korzysta z plików cookie, używamy ich w celu prowadzenia analityki oraz optymalizacji publikowanej treści. Możesz określić warunki przechowywania lub dostępu do cookie zmieniając ustawienia w swojej przeglądarce.
+            Ta strona korzysta z plików cookie, używam ich w celu prowadzenia analityki oraz optymalizacji publikowanej treści. Możesz określić warunki przechowywania lub dostępu do cookie zmieniając ustawienia w swojej przeglądarce.
         </div>
         <StyledAnchor variant="primary" onClick={saveCookies}>Rozumiem</StyledAnchor> 
     </StyledCookiesWrapper>
