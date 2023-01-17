@@ -65,7 +65,7 @@ const ContextProvider = ({children}: Props): JSX.Element => {
     React.useLayoutEffect(() => {
         const hours = (new Date()).getHours();
 
-        if (((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7) && localStorage.getItem('dark-mode') == 'false') || localStorage.getItem('dark-mode') == 'true') {
+        if ((((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7)) && localStorage.getItem('dark-mode') == 'true') || localStorage.getItem('dark-mode') == 'true') {
             dispatch({type: 'CHANGE_COLOR_MODE'})
         }
     }, [])
