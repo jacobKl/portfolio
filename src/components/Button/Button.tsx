@@ -4,12 +4,13 @@ import { StyledAnchor } from '../GlobalStyle';
 type Props = {
     text: string,
     variant: string,
-    anchor: string
+    anchor: string,
+    target: any
 }
 
-const Button = ({text, variant, anchor}: Props): JSX.Element => {
+const Button = ({text, variant, anchor, target}: Props): JSX.Element => {
     return (
-        <StyledAnchor variant={variant} href={anchor}>
+        <StyledAnchor variant={variant} target={target} href={anchor}>
             {text}
         </StyledAnchor>
     );
