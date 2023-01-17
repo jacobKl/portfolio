@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyledRow, StyledColumn, StyledContainer, StyledSectionHeader } from '../GlobalStyle';
-import { AboutMeWrapper, StyledImageWrapper, StyledRightSvg, StyledAboutMeContent } from './AboutMe.styled';
+import { AboutMeWrapper, StyledImageWrapper, StyledRightSvg, StyledAboutMeContent, StyledTech } from './AboutMe.styled';
 
 import UI from './AboutMe.ui'
 import { Context } from '../../context/ContextProvider'
@@ -35,17 +35,19 @@ const AboutMe: React.FC = (): JSX.Element => {
                         <p>
                             {UI[languageMode].aboutMeParagraph3}
                         </p>
-                        <h5>
-                            {UI[languageMode].tech}
-                        </h5>
-                        <ul>
-                            <li>JavaScript (ES6)</li>
-                            <li>PHP</li>
-                            <li>Express / Node.js</li>
-                            <li>React</li>
-                            <li>HTML / CSS / SCSS</li>
-                            <li>WordPress</li>
-                        </ul>
+                        <StyledTech>
+                            <h5>
+                                {UI[languageMode].tech}
+                            </h5>
+                            <ul>
+                                <li>JavaScript (ES6)</li>
+                                <li>PHP</li>
+                                <li>Express / Node.js</li>
+                                <li>React</li>
+                                <li>HTML / CSS / SCSS</li>
+                                <li>WordPress</li>
+                            </ul>
+                        </StyledTech>
                     </StyledAboutMeContent>
                 </StyledRow>
             </StyledContainer>

@@ -47,7 +47,6 @@ const Footer = () => {
                 <p>{UI[languageMode].reachMeText}</p>
             </StyledColumn>
             <StyledColumn>
-                <input type="text" name="name" placeholder={UI[languageMode].nameSurname} value={formData.name} onChange={e => handleField('name', e.target.value)} />
                 <input type="email" name="email" placeholder={UI[languageMode].email} value={formData.email} onChange={e => handleField('email', e.target.value)} />
                 <textarea name="message" placeholder={UI[languageMode].message} rows={5} value={formData.message} onChange={e => handleField('message', e.target.value)}></textarea>
                 <StyledButton type="submit" value={UI[languageMode].send} onClick={submitFormSpark}/>

@@ -5,6 +5,9 @@ import ContextProvider from '../context/ContextProvider';
 import Footer from './Footer/Footer';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components'
+import Cookies from './Cookies/Cookies';
+
 
 type Props = {
     title: string,
@@ -31,11 +34,18 @@ const Layout = ({title, description, children}: Props): JSX.Element => {
             <ContextProvider>
                 <GlobalStyle/>
                 <Header/>
+                <Overflow>
                 {children}
-                <Footer></Footer>
+                </Overflow>
+                {/* <Footer></Footer> */}
+                <Cookies/>
             </ContextProvider>
         </>
     );
 }
+
+const Overflow = styled.main`
+    max-width: 100vw;
+`;
 
 export default Layout;

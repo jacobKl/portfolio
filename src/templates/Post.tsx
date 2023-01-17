@@ -1,40 +1,60 @@
-import React from "react";
-import { StyledContainer, StyledRow } from "../components/GlobalStyle";
+import React, { useRef } from "react";
+import { StyledRow } from "../components/GlobalStyle";
 import Layout from "../components/Layout";
-import { StyledArticleImageWrapper, StyledArticleIntro, StyledArticleWrapper } from "./Post.styled";
+import { StyledArticleImageWrapper, StyledArticleIntro, StyledArticleWrapper, StyledCite } from "./Post.styled";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 
-const PostTemplate = ({pageContext}) => {
-    const [ assetCounter, setAssetCounter ] = React.useState(0);
+type Props = {
+    pageContext: {
+        title: string,
+        secondTitle: string,
+        slug: string,
+        author: string,
+        intro: string,
+        image: any,
+        postedAt: string,
+        imageInfo: string,
+        content: any,
+    }
+}
 
-    const OPTIONS = {
+
+const PostTemplate = ({pageContext}: Props): JSX.Element => {
+    const imageRef = useRef(0);
+
+    const OPTIONS = {   
         counter: 0,
         renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+            [BLOCKS.EMBEDDED_ASSET]: (node, children)=> {
                 let src;
-                if (pageContext.content.references[assetCounter])
-                    src = pageContext.content.references[assetCounter].url;
+                if (pageContext.content.references[imageRef.current]) {
+                    src = pageContext.content.references[imageRef.current].url;
+                    imageRef.current += 1;
+                }
                 return <img style={{maxWidth: 100 + "%"}} src={src ? src : ''} />
+            },
+            [BLOCKS.QUOTE]: (node, children) => {
+                return <StyledCite>{children}</StyledCite>
             }
         }
     }
 
     return (
-        <Layout>
+        <Layout title={pageContext.title} description={pageContext.intro}>
             <>
-                <StyledContainer>
+                <StyledRow>
+                    <StyledArticleImageWrapper>
+                            <GatsbyImage objectFit="cover" image={pageContext.image.gatsbyImageData} alt={pageContext.title} />
+                    </StyledArticleImageWrapper>
                     <StyledArticleIntro>
                         <p style={{marginBottom: 0}}>{pageContext.postedAt}</p>
                         <h1>{pageContext.title}</h1>
                         <h4>{pageContext.secondTitle}</h4>
                         <p>{pageContext.intro}</p>
                     </StyledArticleIntro>
-                </StyledContainer>
-                <StyledArticleImageWrapper>
-                        <GatsbyImage image={pageContext.image.gatsbyImageData} alt={pageContext.title} />
-                </StyledArticleImageWrapper>
+                </StyledRow>
                 <StyledArticleWrapper>
                     {documentToReactComponents(JSON.parse(pageContext.content.raw), OPTIONS)}
                 </StyledArticleWrapper>

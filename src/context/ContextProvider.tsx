@@ -27,6 +27,7 @@ const reducer = (state: State, action: Action): State => {
                 languageMode: payload
             }
         case 'CHANGE_COLOR_MODE': 
+            state.colorMode == 'light' ? localStorage.setItem('dark-mode', 'true') : localStorage.setItem('dark-mode', 'false')
             return {
                 ...state,
                 colorMode: state.colorMode == 'light' ? 'dark' : 'light'
@@ -61,10 +62,10 @@ const ContextProvider = ({children}: Props): JSX.Element => {
         colorMode: 'light'
     })
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         const hours = (new Date()).getHours();
 
-        if ((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7)) {
+        if ((hours >= 18 && hours < 24) || (hours >= 0 && hours <= 7) || localStorage.getItem('dark-mode') == 'true') {
             dispatch({type: 'CHANGE_COLOR_MODE'})
         }
     }, [])

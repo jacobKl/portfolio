@@ -25,6 +25,8 @@ const Header = () => {
     dispatch({type: 'CHANGE_COLOR_MODE'})
   }
 
+  const closeMenu = () => setIsMenuOpened(false);
+
   const { languageMode }: { languageMode: string } = state;
 
   return (
@@ -36,16 +38,16 @@ const Header = () => {
               </NavbarBrand>
 
               <NavbarMenu active={isMenuOpened}>
-                <NavbarMenuItem href="#about-me">
+                <NavbarMenuItem href="#about-me" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].aboutMe}
                 </NavbarMenuItem>
-                <NavbarMenuItem href="#experience">
+                <NavbarMenuItem href="#experience" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].experience}
                 </NavbarMenuItem>
-                <NavbarMenuItem href="#projects">
+                <NavbarMenuItem href="#projects" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].projects}
                 </NavbarMenuItem>
-                <NavbarMenuItem href="#contact">
+                <NavbarMenuItem href="mailto:kqklimek@gmail.com" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].contact}
                 </NavbarMenuItem>
               </NavbarMenu>

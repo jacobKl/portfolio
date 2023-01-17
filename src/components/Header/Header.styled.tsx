@@ -98,6 +98,10 @@ export const NavbarToggler = styled.div<{ active: boolean }> `
     position: relative;
     z-index: 1000;
 
+    svg {
+        color: ${props => props.theme.black};
+    }
+
     @media (max-width: 768px) {
         display: flex;
     }

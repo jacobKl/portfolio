@@ -51,7 +51,7 @@ export const StyledHeroSummary = styled.p`
     letter-spacing: .44px;
     font-size: 22px;
     line-height: 32px;
-    margin: 40px 0; 
+    margin: 40px 0 20px; 
 
     @media (max-width: 986px) {
         font-size: 1.2rem;
@@ -89,4 +89,24 @@ export const StyledHeroSection = styled.section`
   z-index: 2;
   background: ${props => props.theme.white};
   color: ${props => props.theme.black};
+`;
+
+export const StyledIconRow = styled.div`
+    display: flex;
+    margin-bottom: 20px;
+
+    svg {
+        font-size: 1.5rem;
+        color: ${props => props.theme.black};
+        transition: .4s;
+    
+        &:hover {
+            color: ${props => props.theme.primary};
+            transition: .4s;
+        }
+    }
+
+    a + a {
+        margin-left: .7rem;
+    }
 `;

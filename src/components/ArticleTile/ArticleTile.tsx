@@ -1,7 +1,7 @@
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Button from "../Button/Button";
-import { StyledArticleTile, StyledArticleContent, StyledArticleTileWrapper, StyledArticleImage } from "./ArticleTile.styled";
+import { StyledArticleTile, StyledArticleContent, StyledArticleTileWrapper } from "./ArticleTile.styled";
 
 type Props = {
     props: {

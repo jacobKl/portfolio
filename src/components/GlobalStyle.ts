@@ -62,6 +62,7 @@ export const StyledAnchor = styled.a `
   font-size: 16px;
   display: block;
   padding: 8px 40px;
+  cursor: pointer;
 
   &:hover {
     transition: .4s;

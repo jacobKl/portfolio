@@ -69,12 +69,12 @@ const Timeline = (): JSX.Element => {
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2022</span>
-                                <h6>{TimelineUi[languageMode].highschool}</h6>
+                                <h6>{TimelineUi[languageMode].uni}</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                     </StyledTimeline>
                 </StyledColumn>
-                <StyledColumn style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                <StyledColumn style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: "1rem"}}>
                     <StyledSectionHeader>
                         <span>02.</span>
                         {TimelineUi[languageMode].experience}

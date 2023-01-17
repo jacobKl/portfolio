@@ -85,3 +85,14 @@ export const StyledAboutMeContent = styled.div `
         padding-bottom: 50px;
     }
 `;
+
+export const StyledTech = styled.div`
+    background: ${props => props.theme.light};
+    padding: 20px;
+    border-radius: .4rem;
+    margin-top: 20px;
+
+    h5 {
+        margin-top: 0;
+    }
+`;
