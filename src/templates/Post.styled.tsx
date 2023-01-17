@@ -54,15 +54,28 @@ export const StyledArticleIntro = styled.section `
 
 export const StyledArticleWrapper = styled.section `
     max-width: 900px;
-    margin: 0 auto;
     padding: 0 10px;
     color: ${props => props.theme.black};
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    p {
+        // background: ${props => props.theme.light};
+        border-radius: .4rem;
+        text-align: left;
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 10px;
+    }
 
     img { 
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 0 5px rgba(0,0,0,.3);
+        max-height: 500px;
+        margin: 0 auto;
     }
 `;
 
