@@ -46,9 +46,16 @@ export const StyledTimelineIcon = styled.div `
     height: 50px !important;
     border-radius: 25px;
     border: 2px solid ${props => props.theme.primary};
+    display: flex;
+    aligj-items: center;
+    justify-content: center;
 
     margin: 0 10px;
     overflow: hidden;
+
+    .gatsby-image-wrapper {
+        max-width: 50px;
+    }
 
     img {
         object-fit: cover;

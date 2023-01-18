@@ -6,6 +6,10 @@ export const StyledArticleTileWrapper = styled.div`
     padding: 0 15px;
     margin-bottom: 25px;
 
+    .gatsby-image-wrapper {
+        max-height: 220px;
+    }
+
     @media (max-width: 1200px) {
         flex: 1 0 50%;
         max-width: 50%;

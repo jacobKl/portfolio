@@ -38,13 +38,13 @@ const Header = () => {
               </NavbarBrand>
 
               <NavbarMenu active={isMenuOpened}>
-                <NavbarMenuItem href="#about-me" onClick={closeMenu}>
+                <NavbarMenuItem href="/#about-me" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].aboutMe}
                 </NavbarMenuItem>
-                <NavbarMenuItem href="#experience" onClick={closeMenu}>
+                <NavbarMenuItem href="/#experience" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].experience}
                 </NavbarMenuItem>
-                <NavbarMenuItem href="#projects" onClick={closeMenu}>
+                <NavbarMenuItem href="/#projects" onClick={closeMenu}>
                   {UI[languageMode as keyof typeof UI].projects}
                 </NavbarMenuItem>
                 <NavbarMenuItem href="mailto:kqklimek@gmail.com" onClick={closeMenu}>

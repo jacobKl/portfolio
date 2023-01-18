@@ -1,25 +1,16 @@
 import styled from "styled-components";
 
 export const StyledArticleImageWrapper = styled.figure`
-    min-height: 400px;
+    min-height: 300px;
     margin: 0;
     height: 100%;
     position: relative;
     flex: 1 0 50%;
 
+
     img {
         object-fit: cover;
-    }
-
-    &:before {
-        content: '';
-        background: rgba(0,0,0,.1);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
-        z-index: 3;
     }
 `;
 
@@ -28,7 +19,7 @@ export const StyledArticleIntro = styled.section `
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     
     & > * {
         color: ${props => props.theme.black}

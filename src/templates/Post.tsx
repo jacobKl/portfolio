@@ -44,7 +44,7 @@ const PostTemplate = ({pageContext}: Props): JSX.Element => {
     return (
         <Layout title={pageContext.title} description={pageContext.intro}>
             <>
-                <StyledRow>
+                <StyledRow style={{margin: 0, alignItems: 'center'}}>
                     <StyledArticleImageWrapper>
                             <GatsbyImage objectFit="cover" image={pageContext.image.gatsbyImageData} alt={pageContext.title} />
                     </StyledArticleImageWrapper>
