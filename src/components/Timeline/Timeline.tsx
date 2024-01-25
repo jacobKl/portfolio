@@ -55,7 +55,7 @@ const Timeline = (): JSX.Element => {
                                 <StaticImage src={'../../assets/krakweb.png'} alt='Politechnika Krakowska' />
                             </StyledTimelineIcon>
                             <StyledTimelineCol variant={"left"}>
-                                <span>06.2020 - {TimelineUi[languageMode].now}</span>
+                                <span>06.2020 - 01.2024</span>
                                 <h6>Krakweb</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
