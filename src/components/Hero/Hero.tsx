@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
 
     return (
         <StyledHeroSection>
-            { innerWidth >= 986 ? <StyledLeftSvg src={left}/> : null }
-            <StyledLeftInvertedSvg src={left}/>
+            { innerWidth >= 986 ? <StyledLeftSvg alt="Left decor" src={left}/> : null }
+            <StyledLeftInvertedSvg src={left} alt="Inverted decor" />
             <StyledContainer>
                 <StyledHeroLeftColumn style={{height: '90vh'}}>
                     <StyledHi>

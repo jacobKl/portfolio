@@ -22,12 +22,20 @@ const GlobalStyle = createGlobalStyle `
     user-select: none;
   }
 
+  .swiper {
+    max-width: 100%;
+    padding: 20px 0;
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
 
   .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
   }
 
   .swiper-slide img {

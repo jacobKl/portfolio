@@ -7,6 +7,7 @@ import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components'
 import Cookies from './Cookies/Cookies';
+import ShortFooter from './ShortFooter/ShortFooter';
 
 
 type Props = {
@@ -27,6 +28,7 @@ const Layout = ({title, description, children}: Props): JSX.Element => {
     return (
         <>
             <Helmet>
+                <html lang="pl" />
                 <title>{seo.title}</title>
                 <meta name="description" content={seo.description} />
                 <link rel="icon" type="image/x-icon" href={'../assets/favicon.ico'}></link>
@@ -38,6 +40,7 @@ const Layout = ({title, description, children}: Props): JSX.Element => {
                 {children}
                 </Overflow>
                 {/* <Footer></Footer> */}
+                <ShortFooter/>
                 <Cookies/>
             </ContextProvider>
         </>

@@ -32,20 +32,19 @@ const AboutMe: React.FC = (): JSX.Element => {
                         <p>
                             {UI[languageMode].aboutMeParagraph2}
                         </p>
-                        <p>
-                            {UI[languageMode].aboutMeParagraph3}
-                        </p>
                         <StyledTech>
                             <h5>
                                 {UI[languageMode].tech}
                             </h5>
                             <ul>
-                                <li>JavaScript (ES6)</li>
                                 <li>PHP</li>
-                                <li>Express / Node.js</li>
-                                <li>React</li>
+                                <li>Laravel</li>
+                                <li>JavaScript + TypeScript</li>
+                                <li>React + Gatsby</li>
                                 <li>HTML / CSS / SCSS</li>
                                 <li>WordPress</li>
+                                <li>SQL</li>
+                                <li>GraphQL</li>
                             </ul>
                         </StyledTech>
                     </StyledAboutMeContent>

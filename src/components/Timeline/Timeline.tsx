@@ -18,12 +18,6 @@ const Timeline = (): JSX.Element => {
                 <StyledColumn>
                     <StyledTimeline>
                         <StyledTimelineRow>
-                            <StyledTimelineCol variant={"right"}>2018</StyledTimelineCol>
-                            <StyledTimelineIcon />
-                            <StyledTimelineCol variant={'left'}></StyledTimelineCol>
-                        </StyledTimelineRow>
-                        <StyledTimelineStep height={"30"}/>
-                        <StyledTimelineRow>
                             <StyledTimelineCol variant={'right'}/>
                             <StyledTimelineIcon>
                                 <StaticImage src={'../../assets/zsl.png'} alt='Politechnika Krakowska' />
@@ -31,19 +25,6 @@ const Timeline = (): JSX.Element => {
                             <StyledTimelineCol variant={"left"}>
                                 <span>09.2018</span>
                                 <h6>{TimelineUi[languageMode].highschool}</h6>
-                            </StyledTimelineCol>
-                        </StyledTimelineRow>
-                        <StyledTimelineStep height={"100"}/>
-                        <StyledTimelineRow>
-                            <StyledTimelineCol variant={"right"}>
-                                <span>05.2020 - 06.2020</span>
-                                <h6>Krakweb</h6>
-                            </StyledTimelineCol>
-                            <StyledTimelineIcon>
-                                <StaticImage src={'../../assets/krakweb.png'} alt='Politechnika Krakowska' />
-                            </StyledTimelineIcon>
-                            <StyledTimelineCol variant={'left'}>
-                                {TimelineUi[languageMode].practise}
                             </StyledTimelineCol>
                         </StyledTimelineRow>
                         <StyledTimelineStep height={"30"}/>
@@ -59,7 +40,7 @@ const Timeline = (): JSX.Element => {
                                 <h6>Krakweb</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
-                        <StyledTimelineStep height={"100"}/>
+                        <StyledTimelineStep height={"50"}/>
                         <StyledTimelineRow>
                             <StyledTimelineCol variant={"right"}>
                                 {TimelineUi[languageMode].it}
@@ -72,6 +53,29 @@ const Timeline = (): JSX.Element => {
                                 <h6>{TimelineUi[languageMode].uni}</h6>
                             </StyledTimelineCol>
                         </StyledTimelineRow>
+                        <StyledTimelineStep height={"50"}/>
+                        <StyledTimelineRow>
+                            <StyledTimelineCol variant={"left"}>
+                            </StyledTimelineCol>
+                            <StyledTimelineIcon>
+                                <StaticImage src={'../../assets/drblitz.png'} alt='DrBlitz Weblab' />
+                            </StyledTimelineIcon>
+                            <StyledTimelineCol variant={"rights"}>
+                                <span>01.04.2024 - 08.2024</span>
+                                <h6>DrBlitz Weblab</h6>
+                            </StyledTimelineCol>
+                        </StyledTimelineRow>
+                        <StyledTimelineStep height={"20"}/>
+                        <StyledTimelineRow>
+                            <StyledTimelineCol variant={"right"}>
+                                <span>08.20244</span>
+                                <h6>Adream</h6>
+                            </StyledTimelineCol>
+                            <StyledTimelineIcon>
+                                <StaticImage src={'../../assets/adream.png'} alt='Adream' />
+                            </StyledTimelineIcon>
+                            <StyledTimelineCol></StyledTimelineCol>
+                        </StyledTimelineRow>
                     </StyledTimeline>
                 </StyledColumn>
                 <StyledColumn style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: "1rem"}}>
@@ -83,7 +87,7 @@ const Timeline = (): JSX.Element => {
                         {TimelineUi[languageMode].experienceParagraph1}
                     </p>
                     <p>
-                    {TimelineUi[languageMode].experienceParagraph2}
+                        {TimelineUi[languageMode].experienceParagraph2}
                     </p>
                     <Button text={TimelineUi[languageMode].getCv} variant={'primary'} anchor={'/CV_KLIMEK.pdf'} target={'_blank'} style={{alignSelf: 'start'}}/>
                 </StyledColumn>

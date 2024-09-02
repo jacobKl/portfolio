@@ -45,9 +45,8 @@ export const StyledTimelineIcon = styled.div `
     width: 50px !important;
     height: 50px !important;
     border-radius: 25px;
-    border: 2px solid ${props => props.theme.primary};
     display: flex;
-    aligj-items: center;
+    align-items: center;
     justify-content: center;
 
     margin: 0 10px;
