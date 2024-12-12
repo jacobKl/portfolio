@@ -29,9 +29,7 @@ const Timeline = (): JSX.Element => {
           </StyledSectionHeader>
           <p>{TimelineUi[languageMode].experienceParagraph1}</p>
           <p>{TimelineUi[languageMode].experienceParagraph2}</p>
-          <div>
-            <Button text={TimelineUi[languageMode].getCv} variant={"primary"} anchor={"/CV_KLIMEK.pdf"} target={"_blank"} style={{ alignSelf: "start" }} />
-          </div>
+
         </StyledColumn>
         <StyledColumn>
           <StyledTimeline>
