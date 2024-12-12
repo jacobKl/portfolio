@@ -1,7 +1,7 @@
 const AboutMeUi = {
     pl: {
         aboutMe: "O mnie", 
-        aboutMeParagraph1: "Mam 22 lat i jestem studentem Politechniki Krakowskiej na kierunku Informatyka.",
+        aboutMeParagraph1: "Mam 22 lata i jestem studentem Politechniki Krakowskiej na kierunku Informatyka.",
         aboutMeParagraph2: "Aktualnie pracuje jako Fullstack Developer, tworzę witryny w JAM stacku, oraz aplikacje webowe w Laravelu.",
         tech: "Stack technologiczny" 
     },
