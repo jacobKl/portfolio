@@ -24,7 +24,7 @@ const AboutMe: React.FC = (): JSX.Element => {
                     </StyledImageWrapper>
                     <StyledAboutMeContent>
                         <StyledSectionHeader>
-                            <span>01.</span> {UI[languageMode].aboutMe}
+                            {UI[languageMode].aboutMe}
                         </StyledSectionHeader>
                         <p>
                             {UI[languageMode].aboutMeParagraph1}

@@ -6,7 +6,7 @@ const ShortFooter = () => {
   return (
     <StyledFooter>
         <StyledContainer>
-            Jakub Klimek - FullStack developer.
+            Jakub Klimek - Fullstack Developer
         </StyledContainer>
     </StyledFooter>
   )
@@ -14,8 +14,8 @@ const ShortFooter = () => {
 
 const StyledFooter = styled.footer`
     width: 100%;
-    background-color: ${props => props.theme.primary};
-    color: ${props => props.theme.light};
+    background-color: ${props => props.theme.light};
+    color: ${props => props.theme.black};
     padding: 20px 0;
 `;
 

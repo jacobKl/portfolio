@@ -28,9 +28,7 @@ const ArticleTile = ({props}: Props) => {
                         </h2>
                         <p>{props.intro}</p>
                     </div>
-                    <div>
                         <Button text={"Przeczytaj"} variant={"primary"} anchor={props.slug} />
-                     </div>
                 </StyledArticleContent>
             </StyledArticleTile>
         </StyledArticleTileWrapper>

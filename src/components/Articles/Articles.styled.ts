@@ -9,7 +9,7 @@ export const StyledArticles = styled.section`
     align-items: center;
     justify-content: center;
     background-image: ${props => props.theme.dark ? "" : `url(${underlay})`};
-    padding: 140px 0;
+    padding: 140px 0 70px;
     background-position: 0 0;
     background-repeat: no-repeat;
 `;

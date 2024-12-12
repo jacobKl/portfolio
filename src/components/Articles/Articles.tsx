@@ -37,7 +37,6 @@ const Articles: React.FC = (): JSX.Element => {
     return (
         <StyledArticles>
             <StyledSectionHeader>
-                <span>03.</span>
                 {UI[languageMode].myProjects}
             </StyledSectionHeader>
             <StyledArticlesContainer id="projects">

@@ -29,6 +29,7 @@ export const StyledArticleTile = styled.article`
     filter: drop-shadow(10px -7px 20px rgba(0,0,0,0.4));
     background-color: ${props => props.theme.tile};
     border-radius: 7px;
+    height: 100%;
 
     h2 {
         margin-top: 0;
@@ -43,18 +44,25 @@ export const StyledArticleTile = styled.article`
     p {
         margin-top: 0;
         color: ${props => props.theme.black};
+        font-weight: 300;
     }
 
     img {
         filter: brightness(.9);
+        height: 200px;
     }
 `;
 
 export const StyledArticleContent = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100%;
     padding: 20px;
     justify-content: space-between;
-    min-height: 250px;
+    flex-grow: 1;
+
+    a {
+        align-self: flex-end;
+        jusitfy-content: flex-end;
+        flex-grow: 0;
+    }
 `;

@@ -10,7 +10,7 @@ const HeroUi = {
     },
     en: {
         name: "My name is", 
-        iam: "and I am",
+        iam: "and I am a",
         summary: "For over four years I have been actively collecting experience by working on commercial products.",
         contact: "Contact me",
         hi: "Hi,",
