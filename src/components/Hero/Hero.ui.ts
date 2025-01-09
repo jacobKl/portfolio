@@ -6,7 +6,9 @@ const HeroUi = {
         contact: "Skontaktuj się",
         hi: "Cześć,",
         developer: "Fullstack Developerem",
-        projects: "Zobacz moje projekty"
+        projects: "Zobacz moje projekty",
+        myLinkedin: "Mój profil LinkedIn",
+        myGithub: "Mój profil GitHub"
     },
     en: {
         name: "My name is", 
@@ -15,7 +17,9 @@ const HeroUi = {
         contact: "Contact me",
         hi: "Hi,",
         developer: "Fullstack Developer",
-        projects: "Check out my projects"
+        projects: "Check out my projects",
+        myLinkedin: "My LinkedIn profile",
+        myGithub: "My GitHub profile"
 
     }
 }

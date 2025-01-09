@@ -33,7 +33,7 @@ const PostTemplate = ({pageContext}: Props): JSX.Element => {
                     src = pageContext.content.references[imageRef.current].url;
                     imageRef.current += 1;
                 }
-                return <img style={{maxWidth: 100 + "%"}} src={src ? src : ''} />
+                return <img style={{maxWidth: 100 + "%"}} alt="" src={src ? src : ''} />
             },
             [BLOCKS.QUOTE]: (node, children) => {
                 return <StyledCite>{children}</StyledCite>

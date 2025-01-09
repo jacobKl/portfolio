@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import underlay from '../../assets/underlay.png'
+import underlay from '../../assets/underlay.webp'
 
 export const AboutMeWrapper = styled.div `
     min-height: 100vh;
@@ -92,7 +92,8 @@ export const StyledTech = styled.div`
     border-radius: .4rem;
     margin-top: 20px;
 
-    h5 {
+    p {
         margin-top: 0;
+        font-size: 18px;
     }
 `;

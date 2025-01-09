@@ -21,7 +21,7 @@ function Cookies(): JSX.Element {
         <div>
             Ta strona korzysta z plików cookie, używam ich w celu prowadzenia analityki oraz optymalizacji publikowanej treści. Możesz określić warunki przechowywania lub dostępu do cookie zmieniając ustawienia w swojej przeglądarce.
         </div>
-        <StyledAnchor variant="primary" onClick={saveCookies}>Rozumiem</StyledAnchor> 
+        <StyledAnchor href="#" variant="primary" onClick={saveCookies}>Rozumiem</StyledAnchor> 
     </StyledCookiesWrapper>
   )
 }

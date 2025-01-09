@@ -13,4 +13,7 @@ export const StyledCookiesWrapper = styled.div`
 
     ${props => props.visible ? `display: box;`: 'display: none;'}
 
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `;

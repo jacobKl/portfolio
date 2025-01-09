@@ -8,6 +8,10 @@ export const StyledArticleImageWrapper = styled.figure`
     flex: 1 0 50%;
 
 
+    @media (max-width: 992px) {
+        flex: 1 0 100%;
+    }
+
     img {
         object-fit: cover;
         height: 100%;
@@ -25,9 +29,17 @@ export const StyledArticleIntro = styled.section `
         color: ${props => props.theme.black}
     }
     
+    @media (max-width: 992px) {
+        flex: 1 0 100%;
+    }
+
     h1 {
         font-size: 40px;
         margin: 5px 0 0;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
     }
 
     h4 {
@@ -40,6 +52,10 @@ export const StyledArticleIntro = styled.section `
     p {
         font-size: 20px;
         letter-spacing: .44px;
+
+        @media (max-width: 992px) {
+            font-size: 1rem;
+        }
     }
 `;
 
@@ -53,11 +69,10 @@ export const StyledArticleWrapper = styled.section `
     margin: 0 auto;
 
     p {
-        // background: ${props => props.theme.light};
         border-radius: .4rem;
         text-align: left;
         width: 100%;
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding: 10px;
     }
 

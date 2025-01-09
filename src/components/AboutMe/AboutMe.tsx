@@ -19,7 +19,7 @@ const AboutMe: React.FC = (): JSX.Element => {
                     <StyledImageWrapper>
                         <div>
                             <StaticImage src={'../../assets/me.jpeg'} alt="Me" placeholder="blurred"></StaticImage>
-                            <StyledRightSvg src={right}/>
+                            <StyledRightSvg src={right} alt=""/>
                         </div>
                     </StyledImageWrapper>
                     <StyledAboutMeContent>
@@ -33,9 +33,9 @@ const AboutMe: React.FC = (): JSX.Element => {
                             {UI[languageMode].aboutMeParagraph2}
                         </p>
                         <StyledTech>
-                            <h5>
+                            <p>
                                 {UI[languageMode].tech}
-                            </h5>
+                            </p>
                             <ul>
                                 <li>PHP</li>
                                 <li>Laravel</li>

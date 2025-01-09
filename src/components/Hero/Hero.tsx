@@ -37,10 +37,10 @@ const Hero: React.FC = () => {
                     </StyledHeroSummary>
 
                     <StyledIconRow>
-                        <a target="_blank" href="https://www.linkedin.com/in/jakub-klimek-b643071b1/">
+                        <a aria-label={UI[languageMode].myLinkedin} target="_blank" href="https://www.linkedin.com/in/jakub-klimek-b643071b1/">
                             <FontAwesomeIcon icon={faLinkedin}/>
                         </a>
-                        <a target="_blank" href="https://github.com/jacobKl">
+                        <a aria-label={UI[languageMode].myGithub}  target="_blank" href="https://github.com/jacobKl">
                             <FontAwesomeIcon icon={faGithub}/>
                         </a>
                     </StyledIconRow>

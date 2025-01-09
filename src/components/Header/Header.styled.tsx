@@ -16,7 +16,7 @@ export const NavbarWrapper = styled.div `
 
 export const NavbarBrand = styled.a `
     font-size: 1.5rem; 
-    font-family: 'Edu VIC WA NT Beginner';
+    font-family: Poppins;
     color: ${props => props.theme.black};
 `;
 

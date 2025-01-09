@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import underlay from '../../assets/underlay_top.png'
+import underlay from '../../assets/underlay_top.webp'
 
 export const StyledArticles = styled.section`
     position: relative;

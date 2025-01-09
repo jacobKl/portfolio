@@ -3,6 +3,30 @@ import styled, {
 } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle `
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/Poppins/Poppins-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Nunito/Nunito-Regular.ttf);
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
